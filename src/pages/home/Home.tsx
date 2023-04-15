@@ -1,5 +1,5 @@
 import { Box, useMediaQuery } from "@mui/material";
-// import Header from "components/header";
+import Header from "components/header";
 // import Landing from "components/landing";
 import { useRef } from "react";
 
@@ -16,8 +16,10 @@ const Home = () => {
       minHeight="100vh"
       position="relative"
     >
-      {/* <Header />
-      <Landing isMobile={isMobile} /> */}
+      <Header />
+
+      {/* <Landing isMobile={isMobile} /> */}
+
       <Box
         ref={observerRef}
         width="100%"

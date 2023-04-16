@@ -1,13 +1,8 @@
-import styled from "@emotion/styled";
-import {
-  Autocomplete,
-  createFilterOptions,
-  TextField,
-  useMediaQuery,
-} from "@mui/material";
-import type { SimpleIcon } from "simple-icons";
+import styled from '@emotion/styled';
+import { Autocomplete, createFilterOptions, TextField, useMediaQuery } from '@mui/material';
+import type { SimpleIcon } from 'simple-icons';
 
-import { makeIconInfoArray } from "../../utils/allIconInfo";
+import { makeIconInfoArray } from '../../utils/allIconInfo';
 
 const DropdownSvg = styled.div<{ hex: string }>`
   width: 24px;
@@ -29,31 +24,30 @@ interface InputProps {
 }
 
 const Input = ({ handler }: InputProps) => {
-  const isMobile = useMediaQuery("(max-width: 900px)");
+  const isMobile = useMediaQuery('(max-width: 900px)');
   const iconArr = makeIconInfoArray();
 
   const onStackChange = (e: React.SyntheticEvent, value: SimpleIcon[]) => {
     handler(
       value.map(
         (el: SimpleIcon) =>
-          el.slug.substring(0, 1).toUpperCase() +
-          el.slug.substring(1, el.slug.length)
-      )
+          el.slug.substring(0, 1).toUpperCase() + el.slug.substring(1, el.slug.length),
+      ),
     );
   };
 
   return (
-    <div style={{ width: isMobile ? "66%" : "50%", zIndex: "50" }}>
+    <div style={{ width: isMobile ? '66%' : '50%', zIndex: '50' }}>
       <Autocomplete
         multiple
-        id="tags-outlined"
+        id='tags-outlined'
         options={iconArr}
         renderOption={(props, option) => {
           return (
             <li {...props} key={option.path}>
               <DropdownSvg
                 dangerouslySetInnerHTML={{ __html: option.svg }}
-                hex={"#" + option.hex}
+                hex={'#' + option.hex}
               ></DropdownSvg>
               {option.title}
             </li>
@@ -62,9 +56,7 @@ const Input = ({ handler }: InputProps) => {
         getOptionLabel={(option) => option.title}
         onChange={(e, value) => onStackChange(e, value)}
         filterSelectedOptions
-        renderInput={(params) => (
-          <TextField {...params} placeholder="Choose Your Stacks!" />
-        )}
+        renderInput={(params) => <TextField {...params} placeholder='Choose Your Stacks!' />}
         filterOptions={createFilterOptions({
           limit: 100,
         })}

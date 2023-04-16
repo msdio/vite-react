@@ -1,7 +1,7 @@
-import type { SimpleIcon } from "simple-icons";
-import * as icons from "simple-icons";
+import type { SimpleIcon } from 'simple-icons';
+import * as icons from 'simple-icons';
 
-import { customIconArray } from "./customIconObjects";
+import { customIconArray } from './customIconObjects';
 
 export const makeIconInfoArray = () => {
   const iconArr: SimpleIcon[] = Object.values(icons);

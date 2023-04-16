@@ -1,11 +1,11 @@
-import { ThemeProvider } from "@mui/system";
-import { createHashRouter, RouterProvider } from "react-router-dom";
-import RouterContainer from "RouterContainer";
-import { theme } from "styles/theme";
+import { ThemeProvider } from '@mui/system';
+import { createHashRouter, RouterProvider } from 'react-router-dom';
+import RouterContainer from 'RouterContainer';
+import { theme } from 'styles/theme';
 
 const router = createHashRouter([
   {
-    path: "/*",
+    path: '/*',
     element: <RouterContainer />,
   },
 ]);

@@ -1,10 +1,10 @@
-import styled from "@emotion/styled";
-import { Box, Link, Stack, SvgIcon, Typography } from "@mui/material";
-import useMediaQuery from "@mui/material/useMediaQuery";
+import styled from '@emotion/styled';
+import { Box, Link, Stack, Typography } from '@mui/material';
+import useMediaQuery from '@mui/material/useMediaQuery';
 // import LogoWithBackground from 'assets/icons/logoWithBackground';
 // import { APP_NAME, GITHUB_LINK } from 'constants/constants';
 // import { Svg } from 'constants/Svg';
-import { Link as RLink } from "react-router-dom";
+import { Link as RLink } from 'react-router-dom';
 
 const Container = styled.header`
   display: flex;
@@ -37,12 +37,7 @@ const GithubLink = styled(Link)`
   align-items: center;
   justify-content: center;
 
-  background: linear-gradient(
-      0deg,
-      rgba(0, 102, 255, 0.2),
-      rgba(0, 102, 255, 0.2)
-    ),
-    #ffffff;
+  background: linear-gradient(0deg, rgba(0, 102, 255, 0.2), rgba(0, 102, 255, 0.2)), #ffffff;
 
   border-radius: 12px;
 
@@ -50,19 +45,19 @@ const GithubLink = styled(Link)`
 `;
 
 const Header = () => {
-  const isMobile = useMediaQuery("(max-width: 740px)");
+  const isMobile = useMediaQuery('(max-width: 740px)');
 
   return (
     <Container>
-      <RouterLink to="/">
+      <RouterLink to='/'>
         {/* <LogoWithBackground width={29.3} height={29.3} /> */}
         <Typography
-          variant="h4"
-          color="#323443"
-          fontWeight="bold"
-          fontSize="1.75rem"
+          variant='h4'
+          color='#323443'
+          fontWeight='bold'
+          fontSize='1.75rem'
           sx={{
-            cursor: "pointer",
+            cursor: 'pointer',
           }}
         >
           {/* {APP_NAME} */}
@@ -70,28 +65,28 @@ const Header = () => {
         </Typography>
       </RouterLink>
 
-      <Stack direction="row" spacing={2} marginLeft="auto">
+      <Stack direction='row' spacing={2} marginLeft='auto'>
         <GithubLink
           // href={GITHUB_LINK}
-          target="_blank"
-          rel="noreferrer"
+          target='_blank'
+          rel='noreferrer'
           sx={{
-            scale: isMobile ? "0.7" : "1",
+            scale: isMobile ? '0.7' : '1',
           }}
         >
           <Box
-            component="div"
+            component='div'
             sx={{
-              display: "flex",
-              alignItems: "center",
-              justifyContent: "center",
-              gap: "10px",
+              display: 'flex',
+              alignItems: 'center',
+              justifyContent: 'center',
+              gap: '10px',
             }}
           >
             {/* <SvgIcon viewBox='0 0 24 24'>
               <path d={Svg.github} fill='#0066ff' />
             </SvgIcon> */}
-            <Typography color="#0066ff" fontWeight="600" fontSize="1.375rem">
+            <Typography color='#0066ff' fontWeight='600' fontSize='1.375rem'>
               Visit Github
             </Typography>
           </Box>

@@ -6,6 +6,7 @@
   "type": "module",
   "author": "msdio <rlagofka1@gmail.com>, userJu <boochickenood@gmail.com>",
   "license": "MIT",
+  "homepage": ".",
   "scripts": {
     "start": "vite",
     "build": "tsc && vite build",

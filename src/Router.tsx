@@ -1,10 +1,15 @@
 import Loading from 'components/loading';
 import RequireState from 'components/requireState';
-import BackgroundColors from 'pages/background-colors';
-import Home from 'pages/home';
+// import BackgroundColors from 'pages/background-colors';
+// import Home from 'pages/home';
 import Cute404 from 'pages/page404/Cute404';
-import Result from 'pages/result';
+import { lazy } from 'react';
+// import Result from 'pages/result';
 import { Route, Routes } from 'react-router-dom';
+
+const Home = lazy(() => import('pages/home'));
+const BackgroundColors = lazy(() => import('pages/background-colors'));
+const Result = lazy(() => import('pages/result'));
 
 const Router = () => (
   <Routes>

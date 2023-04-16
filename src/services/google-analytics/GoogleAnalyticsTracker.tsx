@@ -1,16 +1,14 @@
-import { useEffect, useState } from "react";
-import ReactGA from "react-ga4";
-import { useLocation } from "react-router-dom";
+import { useEffect, useState } from 'react';
+import ReactGA from 'react-ga4';
+import { useLocation } from 'react-router-dom';
 
 const GoogleAnalyticsTracker = () => {
   const location = useLocation();
   const [initialized, setInitialized] = useState(false);
 
   useEffect(() => {
-    if (!window.location.href.includes("localhost")) {
-      ReactGA.initialize(
-        process.env.REACT_APP_GOOGLE_ANALYTICS_TRACKING_ID as string
-      );
+    if (!window.location.href.includes('localhost')) {
+      ReactGA.initialize(import.meta.env.REACT_APP_GOOGLE_ANALYTICS_TRACKING_ID as string);
     }
     setInitialized(true);
   }, []);
@@ -18,7 +16,7 @@ const GoogleAnalyticsTracker = () => {
   useEffect(() => {
     if (initialized) {
       ReactGA.send({
-        hitType: "pageview",
+        hitType: 'pageview',
         page: location.pathname + location.hash,
       });
     }

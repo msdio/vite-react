@@ -3,7 +3,7 @@ import Header from "components/header";
 import Landing from "components/landing";
 import { useRef } from "react";
 
-// import * as Guide from "../../components/guides";
+import * as Guide from "../../components/guides";
 
 const Home = () => {
   const observerRef = useRef<HTMLDivElement>(null);
@@ -27,8 +27,8 @@ const Home = () => {
         zIndex="3"
         bgcolor="#f9f9f9"
       >
-        {/* <Guide.GuideUsage isMobile={isMobile} observerRef={observerRef} />
-        <Guide.GuideSample isMobile={isMobile} observerRef={observerRef} /> */}
+        <Guide.GuideUsage isMobile={isMobile} observerRef={observerRef} />
+        <Guide.GuideSample isMobile={isMobile} observerRef={observerRef} />
       </Box>
     </Box>
   );

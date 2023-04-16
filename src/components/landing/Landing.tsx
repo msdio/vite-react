@@ -1,8 +1,13 @@
 import { Box, Button, Typography } from "@mui/material";
-// import BackgroundCircle from 'components/BackgroundCircle';
-// import DraggableIcon from 'components/draggable-icon';
-// import Input from 'components/input';
-// import { JavascriptIcon, NodeJSIcon, ReactIcon, SpringIcon } from 'constants/icons';
+import BackgroundCircle from "components/BackgroundCircle";
+import DraggableIcon from "components/draggable-icon";
+import Input from "components/input";
+import {
+  JavascriptIcon,
+  NodeJSIcon,
+  ReactIcon,
+  SpringIcon,
+} from "constants/icons";
 import { useRef, useState } from "react";
 import { useNavigate } from "react-router-dom";
 
@@ -85,7 +90,7 @@ const Landing = ({ isMobile }: { isMobile: boolean }) => {
           scale: isMobile ? "0.7" : "1",
         }}
       >
-        {/* <Input handler={changeSkillSet} /> */}
+        <Input handler={changeSkillSet} />
         <Button
           variant="contained"
           color="success"
@@ -105,17 +110,37 @@ const Landing = ({ isMobile }: { isMobile: boolean }) => {
         </Button>
       </div>
 
-      {/* <DraggableIcon constraints={containerRef} icon={<ReactIcon />} bottom='10%' right='5%' />
-      <DraggableIcon constraints={containerRef} icon={<NodeJSIcon />} top='20%' right='20%' />
-      <DraggableIcon constraints={containerRef} icon={<JavascriptIcon />} top='30%' left='13%' />
-      <DraggableIcon constraints={containerRef} icon={<SpringIcon />} bottom='17%' left='25%' />
+      <DraggableIcon
+        constraints={containerRef}
+        icon={<ReactIcon />}
+        bottom="10%"
+        right="5%"
+      />
+      <DraggableIcon
+        constraints={containerRef}
+        icon={<NodeJSIcon />}
+        top="20%"
+        right="20%"
+      />
+      <DraggableIcon
+        constraints={containerRef}
+        icon={<JavascriptIcon />}
+        top="30%"
+        left="13%"
+      />
+      <DraggableIcon
+        constraints={containerRef}
+        icon={<SpringIcon />}
+        bottom="17%"
+        left="25%"
+      />
 
-      <Box position='absolute' left='-170px' top='-209px' zIndex='1'>
+      <Box position="absolute" left="-170px" top="-209px" zIndex="1">
         <BackgroundCircle />
       </Box>
-      <Box position='absolute' right='-49px' bottom='-289px' zIndex='1'>
+      <Box position="absolute" right="-49px" bottom="-289px" zIndex="1">
         <BackgroundCircle />
-      </Box> */}
+      </Box>
     </Box>
   );
 };

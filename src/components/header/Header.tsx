@@ -1,9 +1,10 @@
 import styled from '@emotion/styled';
 import { Box, Link, Stack, Typography } from '@mui/material';
+import SvgIcon from '@mui/material/SvgIcon';
 import useMediaQuery from '@mui/material/useMediaQuery';
-// import LogoWithBackground from 'assets/icons/logoWithBackground';
-// import { APP_NAME, GITHUB_LINK } from 'constants/constants';
-// import { Svg } from 'constants/Svg';
+import LogoWithBackground from 'assets/icons/logoWithBackground';
+import { APP_NAME, GITHUB_LINK } from 'constants/constants';
+import { Svg } from 'constants/Svg';
 import { Link as RLink } from 'react-router-dom';
 
 const Container = styled.header`
@@ -50,7 +51,7 @@ const Header = () => {
   return (
     <Container>
       <RouterLink to='/'>
-        {/* <LogoWithBackground width={29.3} height={29.3} /> */}
+        <LogoWithBackground width={29.3} height={29.3} />
         <Typography
           variant='h4'
           color='#323443'
@@ -60,14 +61,13 @@ const Header = () => {
             cursor: 'pointer',
           }}
         >
-          {/* {APP_NAME} */}
-          stackticon
+          {APP_NAME}
         </Typography>
       </RouterLink>
 
       <Stack direction='row' spacing={2} marginLeft='auto'>
         <GithubLink
-          // href={GITHUB_LINK}
+          href={GITHUB_LINK}
           target='_blank'
           rel='noreferrer'
           sx={{
@@ -83,9 +83,9 @@ const Header = () => {
               gap: '10px',
             }}
           >
-            {/* <SvgIcon viewBox='0 0 24 24'>
+            <SvgIcon viewBox='0 0 24 24'>
               <path d={Svg.github} fill='#0066ff' />
-            </SvgIcon> */}
+            </SvgIcon>
             <Typography color='#0066ff' fontWeight='600' fontSize='1.375rem'>
               Visit Github
             </Typography>
